@@ -8,7 +8,11 @@ namespace orai_2020_09_15
 {
     class Kor
     {
-        public int r;
+        int r;
+        public Kor(int sugar)
+        {
+            r = sugar;
+        }
         public double Kerulet()
         {
             return 2 * r * Math.PI;
@@ -40,8 +44,9 @@ namespace orai_2020_09_15
             Console.WriteLine("A téglalap kerülete: {0}",oldal.Kerulet());
             Console.WriteLine("A téglalap területe: {0}", oldal.Terulet());
             Console.WriteLine();
-            Kor er = new Kor();
-            er.r = int.Parse(Console.ReadLine());
+            Console.WriteLine("Irja be a kör sugarát");
+            Kor er = new Kor(int.Parse(Console.ReadLine()));
+            //er.r = int.Parse(Console.ReadLine());
             Console.WriteLine("A kör kerülete: {0}", er.Kerulet());
             Console.WriteLine("A kör területe: {0}", er.Terulet());
             Console.ReadKey();
