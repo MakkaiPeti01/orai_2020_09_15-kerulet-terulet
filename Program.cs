@@ -11,7 +11,14 @@ namespace orai_2020_09_15
         int r;
         public Kor(int sugar)
         {
-            r = sugar;
+            if (sugar<1)
+            {
+                r = 1;
+            }
+            else
+            {
+                r = sugar;
+            }
         }
         public double Kerulet()
         {
