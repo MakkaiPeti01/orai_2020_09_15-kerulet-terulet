@@ -24,7 +24,12 @@ namespace orai_2020_09_15
     }
     class Teglalap
     {
-        public int a, b;
+        int a, b;
+        public Teglalap(int c, int d)
+        {
+            a = c;
+            b = d;
+        }      
         public int Kerulet()
         {           
             return 2 * (a + b);
@@ -38,11 +43,15 @@ namespace orai_2020_09_15
     {
         static void Main(string[] args)
         {
-            Teglalap oldal = new Teglalap();
+            /*Teglalap oldal = new Teglalap();
             oldal.a = int.Parse(Console.ReadLine());
-            oldal.b = int.Parse(Console.ReadLine());
-            Console.WriteLine("A téglalap kerülete: {0}",oldal.Kerulet());
-            Console.WriteLine("A téglalap területe: {0}", oldal.Terulet());
+            oldal.b = int.Parse(Console.ReadLine());*/
+            Console.WriteLine("Adja meg a téglalap oldalait");
+            Teglalap valami = new Teglalap(int.Parse(Console.ReadLine()), int.Parse(Console.ReadLine()));
+            //Console.WriteLine("A téglalap kerülete: {0}",oldal.Kerulet());
+            //Console.WriteLine("A téglalap területe: {0}", oldal.Terulet());
+            Console.WriteLine("A téglalap kerülete: {0}",valami.Kerulet());
+            Console.WriteLine("A téglalap területe: {0}",valami.Terulet());
             Console.WriteLine();
             Console.WriteLine("Irja be a kör sugarát");
             Kor er = new Kor(int.Parse(Console.ReadLine()));
